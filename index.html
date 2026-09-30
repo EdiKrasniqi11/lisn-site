@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LISN StemSplitter · Free stem splitter VST3 for Windows</title>
+<meta name="description" content="Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live. A free VST3 for Windows that runs on your own PC.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LISN StemSplitter">
+<meta property="og:description" content="Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live. Free for Windows.">
+<meta property="og:url" content="https://edikrasniqi11.github.io/lisn-site/">
+<meta property="og:image" content="https://edikrasniqi11.github.io/lisn-site/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<canvas id="dusk-waves" class="bg-waves" aria-hidden="true"></canvas>
+<div class="bg-shade" aria-hidden="true"></div>
+
+<div class="page">
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="LISN StemSplitter home"><span class="brand-mark">LISN</span> <span class="brand-name">StemSplitter</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#install">Install</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="btn" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1 class="hero-title">Audio Intelligence <span>Stem by stem</span></h1>
+      <p class="hero-sub">Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live. It all runs on your own PC.</p>
+      <div class="hero-cta">
+        <a class="btn btn-lg" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download for Windows</a>
+        <p class="fineprint">Free · VST3 · Windows 10/11 64-bit · Beta</p>
+      </div>
+
+      <div class="mock" role="img" aria-label="The LISN StemSplitter plugin showing four separated stems with waveforms and Drag buttons">
+        <div class="mock-bar">
+          <div class="brand"><span class="brand-mark">LISN</span> <span class="brand-name">StemSplitter</span></div>
+          <div class="toggles">
+            <div class="seg"><span class="on">Dusk</span> <span>Midnight</span></div>
+            <div class="seg"><span class="on">4 stems</span> <span>6 stems</span></div>
+          </div>
+        </div>
+        <div class="glass mock-panel">
+          <div class="song">
+            <span class="play"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1.5v13l11-6.5z" fill="#2B1822"/></svg></span>
+            <div class="song-info">
+              <div class="song-title">Late Night Demo.mp3</div>
+              <div class="song-meta">0:07 / 0:19 · 74 BPM</div>
+            </div>
+            <div class="song-actions">
+              <span class="tool"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg>Loop</span>
+              <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag mix</span>
+              <span class="tool"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="5.1" y="0" width="1.8" height="12" fill="#FFF4EA"/><rect x="0" y="5.1" width="12" height="1.8" fill="#FFF4EA"/></svg>New song</span>
+            </div>
+          </div>
+          <div class="stems">
+            <div class="stem-row vocals">
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Vocals</div><div class="stem-file">vocals.wav</div></div></div>
+              <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
+              <div class="wave"><i style="height:25.3%"></i><i style="height:40.0%"></i><i style="height:45.3%"></i><i style="height:44.1%"></i><i style="height:69.1%"></i><i style="height:57.4%"></i><i style="height:58.3%"></i><i style="height:52.3%"></i><i style="height:45.2%"></i><i style="height:33.3%"></i><i style="height:23.4%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:25.5%"></i><i style="height:30.2%"></i><i style="height:42.3%"></i><i style="height:54.2%"></i><i style="height:66.0%"></i><i style="height:56.6%"></i><i style="height:48.0%"></i><i style="height:49.0%"></i><i style="height:55.6%"></i><i style="height:43.8%"></i><i style="height:32.9%"></i><i style="height:20.9%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:26.0%"></i><i style="height:36.0%"></i><i style="height:54.0%"></i><i style="height:42.5%"></i><i style="height:50.4%"></i><i style="height:62.2%"></i><i style="height:64.3%"></i><i style="height:42.3%"></i><i style="height:45.0%"></i><i style="height:44.3%"></i><i style="height:28.1%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><span class="playhead"></span></div>
+              <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
+            </div>
+            <div class="stem-row drums">
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Drums</div><div class="stem-file">drums.wav</div></div></div>
+              <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
+              <div class="wave"><i style="height:70.0%"></i><i style="height:24.2%"></i><i style="height:36.2%"></i><i style="height:34.0%"></i><i style="height:83.5%"></i><i style="height:37.4%"></i><i style="height:20.4%"></i><i style="height:27.5%"></i><i style="height:79.1%"></i><i style="height:46.4%"></i><i style="height:30.5%"></i><i style="height:20.9%"></i><i style="height:88.6%"></i><i style="height:40.0%"></i><i style="height:41.2%"></i><i style="height:24.2%"></i><i style="height:82.1%"></i><i style="height:42.9%"></i><i style="height:30.3%"></i><i style="height:24.6%"></i><i style="height:72.2%"></i><i style="height:23.1%"></i><i style="height:36.3%"></i><i style="height:32.6%"></i><i style="height:79.7%"></i><i style="height:45.2%"></i><i style="height:46.0%"></i><i style="height:36.7%"></i><i style="height:93.2%"></i><i style="height:39.9%"></i><i style="height:27.4%"></i><i style="height:27.5%"></i><i style="height:78.6%"></i><i style="height:21.8%"></i><i style="height:32.9%"></i><i style="height:31.5%"></i><i style="height:78.1%"></i><i style="height:38.8%"></i><i style="height:19.0%"></i><i style="height:31.7%"></i><i style="height:87.0%"></i><i style="height:21.5%"></i><i style="height:19.4%"></i><i style="height:28.9%"></i><i style="height:79.1%"></i><i style="height:43.5%"></i><i style="height:24.5%"></i><i style="height:34.5%"></i><i style="height:81.3%"></i><i style="height:22.0%"></i><i style="height:41.4%"></i><i style="height:35.9%"></i><i style="height:87.0%"></i><i style="height:38.7%"></i><i style="height:42.0%"></i><i style="height:47.5%"></i><i style="height:83.6%"></i><i style="height:46.4%"></i><i style="height:23.8%"></i><i style="height:34.2%"></i><i style="height:87.6%"></i><i style="height:32.7%"></i><i style="height:40.8%"></i><i style="height:31.7%"></i><span class="playhead"></span></div>
+              <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
+            </div>
+            <div class="stem-row bass">
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Bass</div><div class="stem-file">bass.wav</div></div></div>
+              <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
+              <div class="wave"><i style="height:34.0%"></i><i style="height:49.4%"></i><i style="height:48.4%"></i><i style="height:34.4%"></i><i style="height:37.5%"></i><i style="height:48.2%"></i><i style="height:44.3%"></i><i style="height:36.7%"></i><i style="height:38.1%"></i><i style="height:43.8%"></i><i style="height:43.9%"></i><i style="height:41.7%"></i><i style="height:39.6%"></i><i style="height:35.4%"></i><i style="height:49.4%"></i><i style="height:43.4%"></i><i style="height:43.4%"></i><i style="height:43.3%"></i><i style="height:43.6%"></i><i style="height:45.2%"></i><i style="height:43.4%"></i><i style="height:46.6%"></i><i style="height:45.8%"></i><i style="height:45.8%"></i><i style="height:41.4%"></i><i style="height:34.3%"></i><i style="height:47.6%"></i><i style="height:34.9%"></i><i style="height:38.5%"></i><i style="height:45.9%"></i><i style="height:43.9%"></i><i style="height:38.0%"></i><i style="height:46.8%"></i><i style="height:45.7%"></i><i style="height:48.3%"></i><i style="height:38.6%"></i><i style="height:45.1%"></i><i style="height:35.0%"></i><i style="height:36.6%"></i><i style="height:48.3%"></i><i style="height:44.3%"></i><i style="height:40.8%"></i><i style="height:36.3%"></i><i style="height:41.0%"></i><i style="height:43.0%"></i><i style="height:48.4%"></i><i style="height:41.8%"></i><i style="height:39.8%"></i><i style="height:48.5%"></i><i style="height:41.4%"></i><i style="height:36.1%"></i><i style="height:49.0%"></i><i style="height:45.9%"></i><i style="height:39.7%"></i><i style="height:44.4%"></i><i style="height:36.1%"></i><i style="height:45.8%"></i><i style="height:34.3%"></i><i style="height:40.2%"></i><i style="height:40.7%"></i><i style="height:41.3%"></i><i style="height:40.8%"></i><i style="height:47.4%"></i><i style="height:40.4%"></i><span class="playhead"></span></div>
+              <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
+            </div>
+            <div class="stem-row other">
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Other</div><div class="stem-file">other.wav</div></div></div>
+              <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
+              <div class="wave"><i style="height:24.1%"></i><i style="height:31.8%"></i><i style="height:49.0%"></i><i style="height:39.7%"></i><i style="height:32.1%"></i><i style="height:43.3%"></i><i style="height:34.7%"></i><i style="height:46.9%"></i><i style="height:53.8%"></i><i style="height:43.4%"></i><i style="height:30.9%"></i><i style="height:44.2%"></i><i style="height:29.1%"></i><i style="height:28.7%"></i><i style="height:40.5%"></i><i style="height:47.4%"></i><i style="height:52.5%"></i><i style="height:50.2%"></i><i style="height:29.6%"></i><i style="height:28.9%"></i><i style="height:26.3%"></i><i style="height:44.5%"></i><i style="height:28.2%"></i><i style="height:39.9%"></i><i style="height:46.4%"></i><i style="height:35.4%"></i><i style="height:43.7%"></i><i style="height:35.0%"></i><i style="height:34.7%"></i><i style="height:49.3%"></i><i style="height:40.6%"></i><i style="height:25.6%"></i><i style="height:29.7%"></i><i style="height:41.4%"></i><i style="height:27.1%"></i><i style="height:49.7%"></i><i style="height:49.2%"></i><i style="height:29.7%"></i><i style="height:41.7%"></i><i style="height:30.7%"></i><i style="height:41.0%"></i><i style="height:35.0%"></i><i style="height:38.1%"></i><i style="height:45.3%"></i><i style="height:28.9%"></i><i style="height:25.7%"></i><i style="height:33.3%"></i><i style="height:50.1%"></i><i style="height:32.5%"></i><i style="height:38.7%"></i><i style="height:29.8%"></i><i style="height:54.6%"></i><i style="height:54.0%"></i><i style="height:35.3%"></i><i style="height:30.3%"></i><i style="height:42.8%"></i><i style="height:34.0%"></i><i style="height:31.6%"></i><i style="height:55.0%"></i><i style="height:25.3%"></i><i style="height:46.7%"></i><i style="height:31.8%"></i><i style="height:26.6%"></i><i style="height:31.7%"></i><span class="playhead"></span></div>
+              <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-h">
+      <p class="kicker">How it works</p>
+      <h2 id="how-h" class="section-title">Drop. Split. Drag.</h2>
+      <ol class="cards cards-how">
+        <li class="glass card">
+          <span class="step-no">01</span>
+          <h3>Drop a song</h3>
+          <p>Load any track straight into the plugin.</p>
+          <div class="chips">
+            <span class="chip">wav</span>
+            <span class="chip">mp3</span>
+            <span class="chip">flac</span>
+            <span class="chip">aiff</span>
+            <span class="chip">ogg</span>
+          </div>
+        </li>
+        <li class="glass card">
+          <span class="step-no">02</span>
+          <h3>Split it</h3>
+          <p>Pick 4 stems, or 6 with guitar and piano.</p>
+          <div class="chips">
+            <span class="chip stem-chip"><span class="dot vocals"></span>Vocals</span>
+            <span class="chip stem-chip"><span class="dot drums"></span>Drums</span>
+            <span class="chip stem-chip"><span class="dot bass"></span>Bass</span>
+            <span class="chip stem-chip"><span class="dot other"></span>Other</span>
+            <span class="chip stem-chip extra"><span class="dot guitar"></span>Guitar</span>
+            <span class="chip stem-chip extra"><span class="dot piano"></span>Piano</span>
+          </div>
+        </li>
+        <li class="glass card">
+          <span class="step-no">03</span>
+          <h3>Drag the stems</h3>
+          <p>Pull each stem onto its own track in your DAW.</p>
+          <div class="chips">
+            <span class="tool dashed sm"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag vocals.wav</span>
+            <span class="tool dashed sm"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag drums.wav</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="features" class="section section-features" aria-labelledby="feat-h">
+      <p class="kicker">Features</p>
+      <h2 id="feat-h" class="section-title">Everything stays in your session.</h2>
+      <div class="cards cards-features">
+        <article class="glass card">
+          <h3>All stems in sync</h3>
+          <p>Every stem plays together. Mute or solo any of them to hear exactly what you need.</p>
+          <div class="chips"><span class="ms">M</span> <span class="ms on">S</span></div>
+        </article>
+        <article class="glass card">
+          <h3>Loop on the beat</h3>
+          <p>Set a loop that snaps to the beat, then drag the full mix or just the loop into your DAW.</p>
+          <div class="chips">
+            <span class="tool sm">Loop</span>
+            <span class="tool dashed sm">Drag loop</span>
+            <span class="tool dashed sm">Drag mix</span>
+          </div>
+        </article>
+        <article class="glass card">
+          <h3>Zoom and scrub</h3>
+          <p>Zoom into the waveforms and scrub to the exact hit, word or bar you want.</p>
+          <div class="mini-wave" aria-hidden="true"><i style="height:25.3%"></i><i style="height:49.4%"></i><i style="height:63.7%"></i><i style="height:54.3%"></i><i style="height:60.5%"></i><i style="height:37.8%"></i><i style="height:27.3%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:29.6%"></i><i style="height:44.2%"></i><i style="height:61.0%"></i><i style="height:71.7%"></i><i style="height:58.8%"></i><i style="height:39.0%"></i><i style="height:26.6%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:28.2%"></i><i style="height:49.2%"></i><i style="height:52.8%"></i><i style="height:47.2%"></i><i style="height:67.0%"></i><i style="height:42.5%"></i><i style="height:25.7%"></i><i style="height:4.0%"></i><span class="playhead"></span></div>
+        </article>
+        <article class="glass card">
+          <h3>Reopens instantly</h3>
+          <p>Songs you have already split open again right away. No waiting twice.</p>
+          <div class="chips"><span class="status"><span class="dot other"></span>Late Night Demo.mp3 · Ready</span></div>
+        </article>
+        <article class="glass card">
+          <h3>Dusk and Midnight</h3>
+          <p>Two themes, warm and cool, to match your setup and your mood.</p>
+          <div class="chips">
+            <div class="seg"><span class="on"><span class="dot lg" style="--c:#D95F6B"></span>Dusk</span> <span><span class="dot lg" style="--c:#4F86B8"></span>Midnight</span></div>
+          </div>
+        </article>
+        <article class="glass card">
+          <h3>Local and private</h3>
+          <p>Splitting runs on your own computer. Your music is never uploaded anywhere.</p>
+          <div class="chips"><span class="status"><span class="dot guitar"></span>Nothing leaves your PC</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="install" class="midnight" aria-labelledby="inst-h">
+      <canvas id="midnight-waves" class="midnight-waves" aria-hidden="true"></canvas>
+      <div class="midnight-shade" aria-hidden="true"></div>
+      <div class="midnight-inner">
+        <p class="kicker">Install</p>
+        <h2 id="inst-h" class="section-title">Up and running in five steps.</h2>
+        <ol class="install-list">
+          <li>
+            <span class="step-num">1</span>
+            <div><h3>Close your DAW and run the installer.</h3></div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <h3 class="pretty">If Windows says “Windows protected your PC”</h3>
+              <div class="click-row"><span>Click</span> <span class="key">More info</span> <span>then</span> <span class="key">Run anyway</span></div>
+              <p class="note">The beta isn't code-signed yet.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body tight">
+              <h3>Allow the admin prompt.</h3>
+              <p class="note pretty">The last step downloads the AI engine. It's about 450 MB, needs internet and takes a few minutes.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div class="step-body loose">
+              <h3>Rescan plugins.</h3>
+              <div class="daw">
+                <span class="daw-name">FL Studio</span>
+                <div class="crumbs"><span class="crumb">Options</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Manage plugins</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Find installed plugins</span></div>
+              </div>
+              <div class="daw">
+                <span class="daw-name">Ableton Live</span>
+                <div class="crumbs"><span class="crumb">Settings</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Plug-Ins</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Rescan</span></div>
+                <p class="note">with “Use VST3 Plug-In System Folders” turned on.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">5</span>
+            <div><h3>Add LISN StemSplitter to a track.</h3></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-reqs" aria-labelledby="req-h">
+      <p class="kicker">Requirements</p>
+      <h2 id="req-h" class="section-title">What you need.</h2>
+      <dl class="reqs">
+        <div><dt>System</dt><dd>Windows 10 or 11 (64-bit)</dd></div>
+        <div><dt>Host</dt><dd>A VST3 host. Tested in FL Studio and Ableton Live.</dd></div>
+        <div><dt>Disk</dt><dd>3 GB of free space</dd></div>
+        <div><dt>Internet</dt><dd>During install</dd></div>
+        <div><dt>Processor</dt><dd>Runs on the CPU</dd></div>
+      </dl>
+    </section>
+
+    <section id="faq" class="section section-faq" aria-labelledby="faq-h">
+      <p class="kicker">FAQ</p>
+      <h2 id="faq-h" class="section-title">Good questions.</h2>
+      <div class="faq">
+        <details class="glass">
+          <summary>Is it free?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>Yes.</p>
+        </details>
+        <details class="glass">
+          <summary>Does it upload my music?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>No. Everything runs on your PC.</p>
+        </details>
+        <details class="glass">
+          <summary>Is there a Mac version?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>Not yet.</p>
+        </details>
+        <details class="glass">
+          <summary>Where are my stems saved?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>In <code>%APPDATA%\StemSplitter\cache</code>. You can drag them anywhere you like.</p>
+        </details>
+        <details class="glass">
+          <summary>How do I uninstall?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>Go to Windows Settings &gt; Apps &gt; LISN StemSplitter. This also removes the AI engine.</p>
+        </details>
+        <details class="glass">
+          <summary>Why does Windows warn me?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>The beta isn't code-signed yet. Click More info, then Run anyway.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="brand"><span class="brand-mark">LISN</span> <span class="brand-name">StemSplitter</span></div>
+        <div class="footer-links">
+          <span>© 2026 LISN</span>
+          <a href="https://github.com/EdiKrasniqi11/lisn-vst/releases">Release notes</a>
+          <a href="https://github.com/EdiKrasniqi11/lisn-vst/issues">Report a problem</a>
+        </div>
+      </div>
+      <p class="credits">Stem separation by Demucs (Meta AI, MIT licence). VST is a registered trademark of Steinberg Media Technologies GmbH.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+// Dusk and Midnight waves, ported from the design. A still frame when the visitor prefers reduced motion.
+(() => {
+  const DUSK = { bg: '#6F7679', layers: [
+    { c: '#D9775F', base: 0.30, amp: 0.10, dir: 1, slope: -0.18 },
+    { c: '#F4A76F', base: 0.46, amp: 0.11, dir: 1, slope: 0.22 },
+    { c: '#7B5467', base: 0.20, amp: 0.12, dir: -1, slope: 0.16 },
+    { c: '#D95F6B', base: 0.72, amp: 0.09, dir: 1, slope: -0.2 },
+    { c: '#F08A7C', base: 0.90, amp: 0.07, dir: 1, slope: 0.14 }
+  ]};
+  const MIDNIGHT = { bg: '#152238', layers: [
+    { c: '#2C4A78', base: 0.28, amp: 0.10, dir: 1, slope: 0.2 },
+    { c: '#4F86B8', base: 0.50, amp: 0.10, dir: 1, slope: -0.22 },
+    { c: '#101A2E', base: 0.24, amp: 0.12, dir: -1, slope: -0.14 },
+    { c: '#35679C', base: 0.76, amp: 0.08, dir: 1, slope: 0.18 },
+    { c: '#86B6DD', base: 0.93, amp: 0.05, dir: 1, slope: -0.1 }
+  ]};
+  const dusk = document.getElementById('dusk-waves');
+  const mid = document.getElementById('midnight-waves');
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  let raf = 0, midVisible = true;
+
+  function size() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    for (const c of [dusk, mid]) {
+      const r = c.getBoundingClientRect();
+      c.width = Math.max(1, Math.round(r.width * dpr));
+      c.height = Math.max(1, Math.round(r.height * dpr));
+    }
+  }
+  function draw(c, theme, t) {
+    const ctx = c.getContext('2d'), w = c.width, h = c.height;
+    ctx.fillStyle = theme.bg; ctx.fillRect(0, 0, w, h);
+    const step = Math.max(8, w / 90);
+    theme.layers.forEach((L, i) => {
+      const p = i * 1.9, f1 = 0.7 + i * 0.22, f2 = 1.6 + i * 0.27;
+      ctx.beginPath(); ctx.moveTo(0, L.dir > 0 ? h : 0);
+      for (let x = 0; x <= w + step; x += step) {
+        const u = x / w;
+        const y = h * (L.base + (u - 0.5) * L.slope) + h * L.amp * (
+          Math.sin(u * Math.PI * 2 * f1 + t * (5 + i) + p) * 0.62 +
+          Math.sin(u * Math.PI * 2 * f2 - t * (3.2 + i * 0.7) + p * 1.7) * 0.38);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, L.dir > 0 ? h : 0); ctx.closePath();
+      ctx.fillStyle = L.c; ctx.fill();
+    });
+  }
+  function frame(ts) {
+    const t = ts * 0.00006;
+    draw(dusk, DUSK, t);
+    if (midVisible || still.matches) draw(mid, MIDNIGHT, t + 3);
+  }
+  function start() {
+    cancelAnimationFrame(raf);
+    if (still.matches) { frame(0); return; }
+    const loop = ts => { frame(ts); raf = requestAnimationFrame(loop); };
+    raf = requestAnimationFrame(loop);
+  }
+
+  const ro = new ResizeObserver(() => { size(); if (still.matches) frame(0); });
+  ro.observe(dusk); ro.observe(mid);
+  new IntersectionObserver(es => { midVisible = es[es.length - 1].isIntersecting; }).observe(mid);
+  still.addEventListener('change', start);
+  size(); start();
+})();
+</script>
+</body>
+</html>
