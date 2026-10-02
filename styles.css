@@ -107,6 +107,13 @@ main { flex: 1; }
 .vol-stack i { position: absolute; left: 0; top: 0; bottom: 0; width: var(--v); border-radius: 2px; background: var(--c); }
 .vol-stack i::after { content: ""; position: absolute; right: -5px; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; background: #FFF4EA; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45); }
 
+/* The promo video */
+.demo-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; font-weight: 700; font-size: 15px; text-decoration: none; text-shadow: 0 1px 10px rgba(32, 18, 27, 0.6); }
+.section-demo { padding-top: clamp(24px, 4vw, 48px); scroll-margin-top: 16px; }
+.promo { max-width: 960px; margin: clamp(28px, 4vw, 48px) 0 0; padding: 10px; border-radius: 22px; background: rgba(32, 18, 27, 0.66); border: 1px solid rgba(255, 244, 234, 0.14); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.55); }
+.promo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 14px; background: #20121B; }
+@media (max-width: 640px) { .promo { padding: 6px; border-radius: 16px; } .promo video { border-radius: 11px; } }
+
 /* Two ways to use it */
 .section-apps { padding-top: 0; padding-bottom: clamp(64px, 9vw, 120px); scroll-margin-top: 16px; }
 .cards-apps { grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); }
