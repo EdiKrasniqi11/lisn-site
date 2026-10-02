@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LISN StemSplitter · Free stem splitter VST3 for Windows</title>
-<meta name="description" content="Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live. A free VST3 for Windows that runs on your own PC.">
+<title>LISN StemSplitter · Free stem splitter for Windows: VST3 and desktop app</title>
+<meta name="description" content="Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live, or on its own in the LISN desktop app. Change the tempo and key, set each stem&#39;s volume. Free for Windows, runs on your own PC.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LISN StemSplitter">
-<meta property="og:description" content="Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live. Free for Windows.">
+<meta property="og:description" content="Split any track into vocals, drums, bass and more, in FL Studio, Ableton Live or the LISN desktop app. Free for Windows.">
 <meta property="og:url" content="https://edikrasniqi11.github.io/lisn-site/">
 <meta property="og:image" content="https://edikrasniqi11.github.io/lisn-site/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,8 @@
       <a class="nav-link" href="#features">Features</a>
       <a class="nav-link" href="#install">Install</a>
       <a class="nav-link" href="#faq">FAQ</a>
-      <a class="btn" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download</a>
+      <a class="nav-link" href="#apps">Desktop app</a>
+      <a class="btn" href="#download"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download</a>
     </nav>
   </header>
 
@@ -34,13 +35,16 @@
 
     <section class="hero">
       <h1 class="hero-title">Audio Intelligence <span>Stem by stem</span></h1>
-      <p class="hero-sub">Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live. It all runs on your own PC.</p>
-      <div class="hero-cta">
-        <a class="btn btn-lg" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download for Windows</a>
-        <p class="fineprint">Free · VST3 · Windows 10/11 64-bit · Beta</p>
+      <p class="hero-sub">Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live, or on its own in the LISN desktop app. It all runs on your own PC.</p>
+      <div id="download" class="hero-cta">
+        <div class="cta-row">
+          <a class="btn btn-lg" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download the VST3</a>
+          <a class="btn btn-lg btn-ghost" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Setup.exe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/><path d="M7 12c1.5-2 3-2 4.5 0s3 2 4.5 0"/></svg>Get the desktop app</a>
+        </div>
+        <p class="fineprint">Free · VST3 for FL Studio and Ableton · Desktop app · Windows 10/11 64-bit · Beta</p>
       </div>
 
-      <div class="mock" role="img" aria-label="The LISN StemSplitter plugin showing four separated stems with waveforms and Drag buttons">
+      <div class="mock" role="img" aria-label="The LISN StemSplitter plugin: four separated stems with volume bars, waveforms and Drag buttons, and Tempo and Key boxes at the bottom">
         <div class="mock-bar">
           <div class="brand"><span class="brand-mark">LISN</span> <span class="brand-name">StemSplitter</span></div>
           <div class="toggles">
@@ -53,39 +57,43 @@
             <span class="play"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1.5v13l11-6.5z" fill="#2B1822"/></svg></span>
             <div class="song-info">
               <div class="song-title">Late Night Demo.mp3</div>
-              <div class="song-meta">0:07 / 0:19 · 74 BPM</div>
+              <div class="song-meta">0:07 / 0:19</div>
             </div>
             <div class="song-actions">
               <span class="tool"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg>Loop</span>
-              <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag mix</span>
               <span class="tool"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="5.1" y="0" width="1.8" height="12" fill="#FFF4EA"/><rect x="0" y="5.1" width="12" height="1.8" fill="#FFF4EA"/></svg>New song</span>
             </div>
           </div>
           <div class="stems">
             <div class="stem-row vocals">
-              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Vocals</div><div class="stem-file">vocals.wav</div></div></div>
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Vocals</div><div class="vol" style="--v:85%" aria-hidden="true"></div></div></div>
               <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
               <div class="wave"><i style="height:25.3%"></i><i style="height:40.0%"></i><i style="height:45.3%"></i><i style="height:44.1%"></i><i style="height:69.1%"></i><i style="height:57.4%"></i><i style="height:58.3%"></i><i style="height:52.3%"></i><i style="height:45.2%"></i><i style="height:33.3%"></i><i style="height:23.4%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:25.5%"></i><i style="height:30.2%"></i><i style="height:42.3%"></i><i style="height:54.2%"></i><i style="height:66.0%"></i><i style="height:56.6%"></i><i style="height:48.0%"></i><i style="height:49.0%"></i><i style="height:55.6%"></i><i style="height:43.8%"></i><i style="height:32.9%"></i><i style="height:20.9%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><i style="height:26.0%"></i><i style="height:36.0%"></i><i style="height:54.0%"></i><i style="height:42.5%"></i><i style="height:50.4%"></i><i style="height:62.2%"></i><i style="height:64.3%"></i><i style="height:42.3%"></i><i style="height:45.0%"></i><i style="height:44.3%"></i><i style="height:28.1%"></i><i style="height:4.0%"></i><i style="height:4.0%"></i><span class="playhead"></span></div>
               <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
             </div>
             <div class="stem-row drums">
-              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Drums</div><div class="stem-file">drums.wav</div></div></div>
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Drums</div><div class="vol" style="--v:100%" aria-hidden="true"></div></div></div>
               <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
               <div class="wave"><i style="height:70.0%"></i><i style="height:24.2%"></i><i style="height:36.2%"></i><i style="height:34.0%"></i><i style="height:83.5%"></i><i style="height:37.4%"></i><i style="height:20.4%"></i><i style="height:27.5%"></i><i style="height:79.1%"></i><i style="height:46.4%"></i><i style="height:30.5%"></i><i style="height:20.9%"></i><i style="height:88.6%"></i><i style="height:40.0%"></i><i style="height:41.2%"></i><i style="height:24.2%"></i><i style="height:82.1%"></i><i style="height:42.9%"></i><i style="height:30.3%"></i><i style="height:24.6%"></i><i style="height:72.2%"></i><i style="height:23.1%"></i><i style="height:36.3%"></i><i style="height:32.6%"></i><i style="height:79.7%"></i><i style="height:45.2%"></i><i style="height:46.0%"></i><i style="height:36.7%"></i><i style="height:93.2%"></i><i style="height:39.9%"></i><i style="height:27.4%"></i><i style="height:27.5%"></i><i style="height:78.6%"></i><i style="height:21.8%"></i><i style="height:32.9%"></i><i style="height:31.5%"></i><i style="height:78.1%"></i><i style="height:38.8%"></i><i style="height:19.0%"></i><i style="height:31.7%"></i><i style="height:87.0%"></i><i style="height:21.5%"></i><i style="height:19.4%"></i><i style="height:28.9%"></i><i style="height:79.1%"></i><i style="height:43.5%"></i><i style="height:24.5%"></i><i style="height:34.5%"></i><i style="height:81.3%"></i><i style="height:22.0%"></i><i style="height:41.4%"></i><i style="height:35.9%"></i><i style="height:87.0%"></i><i style="height:38.7%"></i><i style="height:42.0%"></i><i style="height:47.5%"></i><i style="height:83.6%"></i><i style="height:46.4%"></i><i style="height:23.8%"></i><i style="height:34.2%"></i><i style="height:87.6%"></i><i style="height:32.7%"></i><i style="height:40.8%"></i><i style="height:31.7%"></i><span class="playhead"></span></div>
               <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
             </div>
             <div class="stem-row bass">
-              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Bass</div><div class="stem-file">bass.wav</div></div></div>
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Bass</div><div class="vol" style="--v:62%" aria-hidden="true"></div></div></div>
               <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
               <div class="wave"><i style="height:34.0%"></i><i style="height:49.4%"></i><i style="height:48.4%"></i><i style="height:34.4%"></i><i style="height:37.5%"></i><i style="height:48.2%"></i><i style="height:44.3%"></i><i style="height:36.7%"></i><i style="height:38.1%"></i><i style="height:43.8%"></i><i style="height:43.9%"></i><i style="height:41.7%"></i><i style="height:39.6%"></i><i style="height:35.4%"></i><i style="height:49.4%"></i><i style="height:43.4%"></i><i style="height:43.4%"></i><i style="height:43.3%"></i><i style="height:43.6%"></i><i style="height:45.2%"></i><i style="height:43.4%"></i><i style="height:46.6%"></i><i style="height:45.8%"></i><i style="height:45.8%"></i><i style="height:41.4%"></i><i style="height:34.3%"></i><i style="height:47.6%"></i><i style="height:34.9%"></i><i style="height:38.5%"></i><i style="height:45.9%"></i><i style="height:43.9%"></i><i style="height:38.0%"></i><i style="height:46.8%"></i><i style="height:45.7%"></i><i style="height:48.3%"></i><i style="height:38.6%"></i><i style="height:45.1%"></i><i style="height:35.0%"></i><i style="height:36.6%"></i><i style="height:48.3%"></i><i style="height:44.3%"></i><i style="height:40.8%"></i><i style="height:36.3%"></i><i style="height:41.0%"></i><i style="height:43.0%"></i><i style="height:48.4%"></i><i style="height:41.8%"></i><i style="height:39.8%"></i><i style="height:48.5%"></i><i style="height:41.4%"></i><i style="height:36.1%"></i><i style="height:49.0%"></i><i style="height:45.9%"></i><i style="height:39.7%"></i><i style="height:44.4%"></i><i style="height:36.1%"></i><i style="height:45.8%"></i><i style="height:34.3%"></i><i style="height:40.2%"></i><i style="height:40.7%"></i><i style="height:41.3%"></i><i style="height:40.8%"></i><i style="height:47.4%"></i><i style="height:40.4%"></i><span class="playhead"></span></div>
               <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
             </div>
             <div class="stem-row other">
-              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Other</div><div class="stem-file">other.wav</div></div></div>
+              <div class="stem-name"><span class="stem-color"></span><div><div class="stem-title">Other</div><div class="vol" style="--v:74%" aria-hidden="true"></div></div></div>
               <span class="mute"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
               <div class="wave"><i style="height:24.1%"></i><i style="height:31.8%"></i><i style="height:49.0%"></i><i style="height:39.7%"></i><i style="height:32.1%"></i><i style="height:43.3%"></i><i style="height:34.7%"></i><i style="height:46.9%"></i><i style="height:53.8%"></i><i style="height:43.4%"></i><i style="height:30.9%"></i><i style="height:44.2%"></i><i style="height:29.1%"></i><i style="height:28.7%"></i><i style="height:40.5%"></i><i style="height:47.4%"></i><i style="height:52.5%"></i><i style="height:50.2%"></i><i style="height:29.6%"></i><i style="height:28.9%"></i><i style="height:26.3%"></i><i style="height:44.5%"></i><i style="height:28.2%"></i><i style="height:39.9%"></i><i style="height:46.4%"></i><i style="height:35.4%"></i><i style="height:43.7%"></i><i style="height:35.0%"></i><i style="height:34.7%"></i><i style="height:49.3%"></i><i style="height:40.6%"></i><i style="height:25.6%"></i><i style="height:29.7%"></i><i style="height:41.4%"></i><i style="height:27.1%"></i><i style="height:49.7%"></i><i style="height:49.2%"></i><i style="height:29.7%"></i><i style="height:41.7%"></i><i style="height:30.7%"></i><i style="height:41.0%"></i><i style="height:35.0%"></i><i style="height:38.1%"></i><i style="height:45.3%"></i><i style="height:28.9%"></i><i style="height:25.7%"></i><i style="height:33.3%"></i><i style="height:50.1%"></i><i style="height:32.5%"></i><i style="height:38.7%"></i><i style="height:29.8%"></i><i style="height:54.6%"></i><i style="height:54.0%"></i><i style="height:35.3%"></i><i style="height:30.3%"></i><i style="height:42.8%"></i><i style="height:34.0%"></i><i style="height:31.6%"></i><i style="height:55.0%"></i><i style="height:25.3%"></i><i style="height:46.7%"></i><i style="height:31.8%"></i><i style="height:26.6%"></i><i style="height:31.7%"></i><span class="playhead"></span></div>
               <span class="tool dashed"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag</span>
             </div>
+          </div>
+          <div class="mock-foot">
+            <span class="tbox"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 18a8.5 8.5 0 1 1 15 0"/><path d="m12 13 3.5-3.5"/></svg><span class="tbox-v"><b>81 BPM</b><small>1.10× of 74</small></span><span class="chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></span>
+            <span class="tbox"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="tbox-v"><b>+2 st</b><small>Key</small></span><span class="chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></span>
+            <span class="tool dashed foot-chip"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag mix</span>
           </div>
         </div>
       </div>
@@ -123,7 +131,7 @@
         <li class="glass card">
           <span class="step-no">03</span>
           <h3>Drag the stems</h3>
-          <p>Pull each stem onto its own track in your DAW.</p>
+          <p>Pull each stem onto its own track in your DAW, or just play along in the desktop app.</p>
           <div class="chips">
             <span class="tool dashed sm"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag vocals.wav</span>
             <span class="tool dashed sm"><svg width="8" height="13" viewBox="0 0 8 13" aria-hidden="true"><circle cx="1.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="1.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="6.5" r="1.3" fill="#FFF4EA"/><circle cx="1.5" cy="11.5" r="1.3" fill="#FFF4EA"/><circle cx="6.5" cy="11.5" r="1.3" fill="#FFF4EA"/></svg>Drag drums.wav</span>
@@ -137,13 +145,23 @@
       <h2 id="feat-h" class="section-title">Everything stays in your session.</h2>
       <div class="cards cards-features">
         <article class="glass card">
+          <h3>Tempo and key, apart</h3>
+          <p>Drag the Tempo box from 0.5× to 2× and read it in BPM. Shift the key up to 12 semitones either way. One never changes the other.</p>
+          <div class="chips"><span class="tbox sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 18a8.5 8.5 0 1 1 15 0"/><path d="m12 13 3.5-3.5"/></svg><span class="tbox-v"><b>96 BPM</b><small>1.30× of 74</small></span><span class="chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></span><span class="tbox sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="tbox-v"><b>-3 st</b><small>Key</small></span><span class="chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></span></div>
+        </article>
+        <article class="glass card">
+          <h3>A volume for every stem</h3>
+          <p>Each stem has its own bar under its name. Pull the vocals down, push the bass up, double-click for 100%.</p>
+          <div class="vol-stack" aria-hidden="true"><span class="vocals"><i style="--v:45%"></i></span><span class="drums"><i style="--v:100%"></i></span><span class="bass"><i style="--v:80%"></i></span></div>
+        </article>
+        <article class="glass card">
           <h3>All stems in sync</h3>
           <p>Every stem plays together. Mute or solo any of them to hear exactly what you need.</p>
           <div class="chips"><span class="ms">M</span> <span class="ms on">S</span></div>
         </article>
         <article class="glass card">
           <h3>Loop on the beat</h3>
-          <p>Set a loop that snaps to the beat, then drag the full mix or just the loop into your DAW.</p>
+          <p>Set a loop that snaps to the beat, then drag the full mix or just the loop into your DAW, with your volumes, tempo and key baked in.</p>
           <div class="chips">
             <span class="tool sm">Loop</span>
             <span class="tool dashed sm">Drag loop</span>
@@ -175,12 +193,43 @@
       </div>
     </section>
 
+    <section id="apps" class="section section-apps" aria-labelledby="apps-h">
+      <p class="kicker">Two ways to use it</p>
+      <h2 id="apps-h" class="section-title">In your DAW, or on its own.</h2>
+      <div class="cards cards-apps">
+        <article class="glass card app-card">
+          <p class="app-kind">VST3 plugin</p>
+          <h3>LISN StemSplitter</h3>
+          <p>Lives on a track in FL Studio or Ableton Live. Split, then drag stems, the mix or a loop straight onto your timeline.</p>
+          <ul class="ticks">
+            <li>Drag and drop into your DAW</li>
+            <li>Stems that reopen instantly with your session</li>
+            <li>Installs for all users (one admin prompt)</li>
+          </ul>
+          <a class="btn btn-md" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download the VST3</a>
+        </article>
+        <article class="glass card app-card">
+          <p class="app-kind">Desktop app · New</p>
+          <h3>LISN</h3>
+          <p>No DAW needed. Open a song, split it, and practise or study along at your own tempo and key. The waves flow in as it opens.</p>
+          <div class="titlebar" aria-hidden="true"><span class="brand-mark">LISN</span><span class="tb-right"><span class="seg tb-seg"><span class="on">Dusk</span> <span>Midnight</span></span><span class="tb-sep"></span><span class="tb-btn">&#8211;</span><span class="tb-btn">&#215;</span></span></div>
+          <ul class="ticks">
+            <li>Right-click a song, Open with, LISN</li>
+            <li>Its own wave-styled window, no white title bar</li>
+            <li>Installs just for you, no admin needed</li>
+          </ul>
+          <a class="btn btn-md btn-ghost" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Setup.exe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/><path d="M7 12c1.5-2 3-2 4.5 0s3 2 4.5 0"/></svg>Get the desktop app</a>
+        </article>
+      </div>
+    </section>
+
     <section id="install" class="midnight" aria-labelledby="inst-h">
       <canvas id="midnight-waves" class="midnight-waves" aria-hidden="true"></canvas>
       <div class="midnight-shade" aria-hidden="true"></div>
       <div class="midnight-inner">
         <p class="kicker">Install</p>
-        <h2 id="inst-h" class="section-title">Up and running in five steps.</h2>
+        <h2 id="inst-h" class="section-title">Up and running in minutes.</h2>
+        <p class="install-for">The VST3 plugin</p>
         <ol class="install-list">
           <li>
             <span class="step-num">1</span>
@@ -221,6 +270,30 @@
             <div><h3>Add LISN StemSplitter to a track.</h3></div>
           </li>
         </ol>
+        <p class="install-for">The desktop app</p>
+        <ol class="install-list">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body tight">
+              <h3>Run LISN-Setup.exe.</h3>
+              <p class="note pretty">No admin prompt: it installs just for you. If Windows says “Windows protected your PC”, click More info, then Run anyway.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body tight">
+              <h3>Let it fetch the AI engine.</h3>
+              <p class="note pretty">About 320 MB. It needs internet and takes a few minutes.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <h3>Open a song.</h3>
+              <div class="crumbs"><span class="crumb">Start menu</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">LISN</span> <span class="sep">or</span> <span class="crumb">Right-click a song</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Open with</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">LISN</span></div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -229,7 +302,7 @@
       <h2 id="req-h" class="section-title">What you need.</h2>
       <dl class="reqs">
         <div><dt>System</dt><dd>Windows 10 or 11 (64-bit)</dd></div>
-        <div><dt>Host</dt><dd>A VST3 host. Tested in FL Studio.</dd></div>
+        <div><dt>Host</dt><dd>A VST3 host (tested in FL Studio), or none with the desktop app</dd></div>
         <div><dt>Disk</dt><dd>3 GB of free space</dd></div>
         <div><dt>Internet</dt><dd>During install</dd></div>
         <div><dt>Processor</dt><dd>Runs on the CPU</dd></div>
@@ -249,6 +322,14 @@
           <p>No. Everything runs on your PC.</p>
         </details>
         <details class="glass">
+          <summary>Do I need a DAW?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>No. LISN, the desktop app, splits and plays songs on its own. The VST3 is for when you want the stems inside FL Studio or Ableton Live.</p>
+        </details>
+        <details class="glass">
+          <summary>Does changing the tempo change the key?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>No. Tempo (0.5× to 2×, shown in BPM) and key (up to 12 semitones up or down) are separate. Double-click either box to reset it.</p>
+        </details>
+        <details class="glass">
           <summary>Is there a Mac version?<span class="faq-plus" aria-hidden="true">+</span></summary>
           <p>Not yet.</p>
         </details>
@@ -258,7 +339,7 @@
         </details>
         <details class="glass">
           <summary>How do I uninstall?<span class="faq-plus" aria-hidden="true">+</span></summary>
-          <p>Go to Windows Settings &gt; Apps &gt; LISN StemSplitter. This also removes the AI engine.</p>
+          <p>Go to Windows Settings &gt; Apps, then LISN StemSplitter for the plugin or LISN for the desktop app. Each removes its own AI engine.</p>
         </details>
         <details class="glass">
           <summary>Why does Windows warn me?<span class="faq-plus" aria-hidden="true">+</span></summary>
