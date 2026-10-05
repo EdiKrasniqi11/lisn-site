@@ -425,10 +425,10 @@
       ctx.fillStyle = L.c; ctx.fill();
     });
   }
-  function frame(ts) {
+  function frame(ts, all) {
     const t = ts * 0.00006;
     draw(dusk, DUSK, t);
-    if (midVisible || still.matches) draw(mid, MIDNIGHT, t + 3);
+    if (all || midVisible || still.matches) draw(mid, MIDNIGHT, t + 3);
   }
   function start() {
     cancelAnimationFrame(raf);
@@ -437,7 +437,8 @@
     raf = requestAnimationFrame(loop);
   }
 
-  const ro = new ResizeObserver(() => { size(); if (still.matches) frame(0); });
+  // Resizing clears a canvas, and a phone's address bar resizes them while scrolling: redraw both before the frame paints
+  const ro = new ResizeObserver(() => { size(); frame(still.matches ? 0 : performance.now(), true); });
   ro.observe(dusk); ro.observe(mid);
   new IntersectionObserver(es => { midVisible = es[es.length - 1].isIntersecting; }).observe(mid);
   still.addEventListener('change', start);
