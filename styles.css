@@ -41,6 +41,26 @@ main { flex: 1; }
 .site-header .brand-name { font-size: 18px; }
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; }
 .nav-link { text-decoration: none; font-weight: 500; font-size: 15px; }
+.menu-btn { display: none; }
+/* Phone menu (the header wraps below 830 px): a menu button, and the links in a card under the header (the "Website header on a phone" mockup, A) */
+@media (max-width: 840px) {
+  .site-header { position: relative; z-index: 5; flex-wrap: nowrap; column-gap: 12px; }
+  /* Narrower than 390 px the logo and name shrink with the screen so they stay on one line beside the button
+     (they need 297 px at full size; the padding, gaps and button take 112) */
+  .site-header .brand-mark, .site-header .brand-symbol { font-size: min(26px, calc((100vw - 116px) * 0.095)); }
+  .site-header .brand-name { font-size: min(18px, calc((100vw - 116px) * 0.066)); white-space: nowrap; }
+  .menu-btn { display: flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 999px; border: 1px solid rgba(255, 244, 234, 0.24); background: rgba(32, 18, 27, 0.55); color: #FFF4EA; cursor: pointer; }
+  .menu-btn .i-close, .site-header.open .menu-btn .i-open { display: none; }
+  .site-header.open .menu-btn .i-close { display: block; }
+  .site-header.open .menu-btn { border-color: rgba(255, 244, 234, 0.4); }
+  .site-header.open::before { content: ""; position: fixed; inset: 0; z-index: -1; background: rgba(20, 10, 16, 0.42); }
+  .nav { display: none; position: absolute; top: calc(100% + 2px); left: 12px; right: 12px; flex-direction: column; align-items: stretch; gap: 0; padding: 8px; border-radius: 22px; background: rgba(32, 18, 27, 0.9); -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px); border: 1px solid rgba(255, 244, 234, 0.14); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+  .site-header.open .nav { display: flex; }
+  .nav-link { display: flex; align-items: center; justify-content: space-between; height: 52px; padding: 0 14px; font-size: 17px; }
+  .nav-link + .nav-link { border-top: 1px solid rgba(255, 244, 234, 0.08); }
+  .nav-link::after { content: ""; width: 7px; height: 7px; margin-right: 4px; border-top: 2px solid rgba(255, 244, 234, 0.5); border-right: 2px solid rgba(255, 244, 234, 0.5); transform: rotate(45deg); }
+  .nav .btn { justify-content: center; height: 50px; margin-top: 8px; font-size: 15px; }
+}
 .btn { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 999px; background: #FFF4EA; color: #2B1822; text-decoration: none; font-weight: 700; font-size: 14px; }
 .btn:hover { color: #2B1822; }
 .btn-lg { gap: 12px; height: 58px; padding: 0 30px; font-size: 17px; box-shadow: 0 14px 40px rgba(32, 18, 27, 0.35); }
