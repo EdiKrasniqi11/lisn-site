@@ -1,6 +1,6 @@
 # lisn-site
 
-The LISN StemSplitter website. GitHub Pages serves `main` at https://edikrasniqi11.github.io/lisn-site/. Plain HTML and CSS, no build: edit, commit, push, and it's live in about a minute.
+The LISN StemSplitter website. GitHub Pages serves `main` at https://lisn.digital/ (the domain is set by the `CNAME` file; DNS is at GoDaddy). Plain HTML and CSS, no build: edit, commit, push, and it's live in about a minute.
 
 - `index.html`: the page, plus the small script that draws the Dusk and Midnight waves.
 - `styles.css`: every style, taken from the Claude Design export.
