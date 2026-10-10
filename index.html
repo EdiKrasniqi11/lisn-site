@@ -4,17 +4,148 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LISN StemSplitter · Free stem splitter for Windows: VST3 and desktop app</title>
-<meta name="description" content="Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live, or on its own in the LISN desktop app. Change the tempo and key, set each stem&#39;s volume. Free for Windows, runs on your own PC.">
+<meta name="description" content="Free stem splitter for Windows. Split any song into vocals, drums, bass and more in FL Studio, Ableton Live or the LISN desktop app. Runs on your PC.">
+<link rel="canonical" href="https://lisn.digital/">
+<meta name="theme-color" content="#2B1822">
 <link rel="icon" href="assets/favicon.ico" sizes="48x48">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="LISN">
 <meta property="og:title" content="LISN StemSplitter">
 <meta property="og:description" content="Split any track into vocals, drums, bass and more, in FL Studio, Ableton Live or the LISN desktop app. Free for Windows.">
 <meta property="og:url" content="https://lisn.digital/">
 <meta property="og:image" content="https://lisn.digital/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LISN StemSplitter splitting a song into vocals, drums, bass and other stems">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "name": "LISN",
+   "url": "https://lisn.digital/"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "LISN StemSplitter",
+   "description": "A free VST3 stem splitter for FL Studio and Ableton Live. Splits a song into vocals, drums, bass and other stems with Demucs, plays them in sync and lets you drag them onto your tracks.",
+   "applicationCategory": "MultimediaApplication",
+   "applicationSubCategory": "VST3 plugin",
+   "operatingSystem": "Windows 10, Windows 11",
+   "downloadUrl": "https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "isAccessibleForFree": true,
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "author": {
+    "@type": "Person",
+    "name": "Edi Krasniqi"
+   },
+   "image": "https://lisn.digital/assets/og.png",
+   "url": "https://lisn.digital/"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "LISN",
+   "description": "A free desktop app for Windows that splits a song into vocals, drums, bass and other stems with Demucs and plays them in sync, without a DAW.",
+   "applicationCategory": "MultimediaApplication",
+   "applicationSubCategory": "Stem splitter",
+   "operatingSystem": "Windows 10, Windows 11",
+   "downloadUrl": "https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Setup.exe",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "isAccessibleForFree": true,
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "author": {
+    "@type": "Person",
+    "name": "Edi Krasniqi"
+   },
+   "image": "https://lisn.digital/assets/og.png",
+   "url": "https://lisn.digital/"
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is it free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it upload my music?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Everything runs on your PC."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need a DAW?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. LISN, the desktop app, splits and plays songs on its own. The VST3 is for when you want the stems inside FL Studio or Ableton Live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does changing the tempo change the key?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Tempo (0.5× to 2×, shown in BPM) and key (up to 12 semitones up or down) are separate. Double-click either box to reset it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a Mac version?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not yet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where are my stems saved?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In %APPDATA%\\StemSplitter\\cache. You can drag them anywhere you like."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I uninstall?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Go to Windows Settings > Apps, then LISN StemSplitter for the plugin or LISN for the desktop app. Each removes its own AI engine."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does Windows warn me?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The beta isn't code-signed yet. Click More info, then Run anyway."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <canvas id="dusk-waves" class="bg-waves" aria-hidden="true"></canvas>
