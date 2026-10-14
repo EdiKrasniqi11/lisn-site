@@ -73,6 +73,8 @@ const rows = [...app.querySelectorAll('.app-row')];
 
 function audio() {   // made on the first press: browsers only start audio from one
   if (ac) return ac;
+  // iPhones mute Web Audio with the ring/silent switch; as media playback it plays like a video (Safari 16.4+)
+  if (navigator.audioSession) navigator.audioSession.type = 'playback';
   ac = new AudioContext();
   analyser = ac.createAnalyser();
   analyser.fftSize = 1024;
