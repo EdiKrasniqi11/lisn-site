@@ -42,8 +42,8 @@ main { flex: 1; }
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; }
 .nav-link { text-decoration: none; font-weight: 500; font-size: 15px; }
 .menu-btn { display: none; }
-/* Phone menu (the header wraps below 830 px): a menu button, and the links in a card under the header (the "Website header on a phone" mockup, A) */
-@media (max-width: 840px) {
+/* Phone menu (the header wraps below 950 px): a menu button, and the links in a card under the header (the "Website header on a phone" mockup, A) */
+@media (max-width: 960px) {
   .site-header { position: relative; z-index: 5; flex-wrap: nowrap; column-gap: 12px; }
   /* Narrower than 390 px the logo and name shrink with the screen so they stay on one line beside the button
      (they need 297 px at full size; the padding, gaps and button take 112) */
@@ -81,7 +81,7 @@ main { flex: 1; }
 
 /* The LISN app window in the hero: the desktop app at its own 760 x 500 px, every value from lisn-vst Source/ (Theme.cpp,
    Screens.cpp, StemRow.cpp, Controls.cpp). app.js scales it to the frame (--s), moves the playhead (--head) and draws the waves. */
-.app-frame { position: relative; width: 100%; max-width: 1000px; aspect-ratio: 760 / 500; margin-top: clamp(48px, 7vw, 84px); overflow: hidden; border-radius: 9px; text-align: left; background: #6F7679; box-shadow: 0 50px 120px rgba(32, 18, 27, 0.5), 0 10px 30px rgba(32, 18, 27, 0.3), 0 0 0 1px rgba(255, 244, 234, 0.12); }
+.app-frame { scroll-margin-top: 24px; position: relative; width: 100%; max-width: 1000px; aspect-ratio: 760 / 500; margin-top: clamp(48px, 7vw, 84px); overflow: hidden; border-radius: 9px; text-align: left; background: #6F7679; box-shadow: 0 50px 120px rgba(32, 18, 27, 0.5), 0 10px 30px rgba(32, 18, 27, 0.3), 0 0 0 1px rgba(255, 244, 234, 0.12); }
 .app { --s: 1; --head: 0; --ground: #6F7679; --tint: 32, 18, 27; --vocals: #F4A76F; --drums: #EF7A7F; --bass: #C9A0BD; --other: #A9B8BC;
   position: absolute; left: 0; top: 0; width: 760px; height: 500px; transform: scale(var(--s)); transform-origin: 0 0; background: var(--ground); color: #FFF4EA; -webkit-user-select: none; user-select: none; }
 .app[data-theme="midnight"] { --ground: #152238; --tint: 8, 14, 28; --vocals: #F3B98A; --drums: #6FD3C6; --bass: #A9B4FF; --other: #8DB8DB; }
