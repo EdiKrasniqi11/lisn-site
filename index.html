@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/favicon.ico" sizes="48x48">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LISN">
 <meta property="og:title" content="LISN StemSplitter">
@@ -590,6 +590,56 @@
   // the dimmed page behind the card is the header's ::before, so a tap on it lands on the header itself
   header.addEventListener('click', e => { if (e.target === header || e.target.closest('.nav a')) set(false); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();
+</script>
+<dialog class="news" aria-labelledby="news-title">
+  <form class="news-ask">
+    <p class="news-started"><span class="news-tick" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4A76F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Your download has started</p>
+    <h2 id="news-title">Want to hear about new plugins?</h2>
+    <p>I'm working on more free tools for producers. Leave your email and I'll send a short note when something new is out. It's completely optional: LISN works exactly the same without it.</p>
+    <label for="news-email">Email</label>
+    <input id="news-email" name="email_address" type="email" autocomplete="email" placeholder="you@example.com" required>
+    <p class="news-error" role="alert" hidden>That didn't go through. Check the address, or try again in a moment.</p>
+    <div class="news-buttons"><button class="btn btn-md" type="submit" data-goatcounter-click="newsletter-subscribe" data-goatcounter-title="Newsletter: Keep me posted">Keep me posted</button><button class="news-no" type="button" data-goatcounter-click="newsletter-no" data-goatcounter-title="Newsletter: No thanks">No thanks</button></div>
+    <p class="news-small">A few emails a year at most, unsubscribe in one click. Your address is kept by Kit, our newsletter service, and never shared.</p>
+  </form>
+  <div class="news-done" hidden>
+    <span class="news-mail" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4A76F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+    <h2>Almost done: check your inbox</h2>
+    <p>Click the link in the email from LISN to confirm, so nobody can sign you up by mistake. Enjoy the plugin!</p>
+    <button class="btn btn-md news-close" type="button">Close</button>
+  </div>
+</dialog>
+<script>
+// The optional newsletter (the newsletter-prompt mockup, A): after a browser's first download click, while the download
+// runs, a dialog asks for an email. It goes to Kit's form, which sends the "confirm your subscription" email.
+(() => {
+  const d = document.querySelector('.news'), ask = d.querySelector('.news-ask'), done = d.querySelector('.news-done');
+  const asked = () => { try { return localStorage.getItem('lisn-news'); } catch { return 'no storage'; } };
+  if (!d.showModal) return;
+  document.addEventListener('click', e => {
+    if (!e.target.closest('a[href*="/releases/latest/download/"]') || asked()) return;
+    try { localStorage.setItem('lisn-news', 'asked'); } catch {}
+    setTimeout(() => d.showModal(), 400);   // the download has started by then
+  });
+  ask.addEventListener('submit', async e => {
+    e.preventDefault();
+    const button = ask.querySelector('[type=submit]'), error = ask.querySelector('.news-error');
+    button.disabled = true;
+    error.hidden = true;
+    try {
+      const r = await fetch('https://app.kit.com/forms/10051148/subscriptions', { method: 'POST', body: new FormData(ask), headers: { Accept: 'application/json' } });
+      if (!r.ok || (await r.json()).status !== 'success') throw new Error(r.status);
+      ask.hidden = true;
+      done.hidden = false;
+    } catch {
+      error.hidden = false;
+    } finally {
+      button.disabled = false;
+    }
+  });
+  for (const b of d.querySelectorAll('.news-no, .news-close')) b.addEventListener('click', () => d.close());
+  d.addEventListener('click', e => { if (e.target === d) d.close(); });   // a click on the dimmed page
 })();
 </script>
 <script type="module" src="app.js?v=2"></script>
