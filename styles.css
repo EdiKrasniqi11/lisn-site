@@ -308,3 +308,23 @@ details[open] .faq-plus { transform: rotate(45deg); }
 .footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-size: 14px; }
 .footer-links a { font-weight: 500; }
 .credits { margin: 0; font-size: 13px; line-height: 1.6; opacity: 0.78; max-width: 70ch; }
+
+/* The optional newsletter dialog after a first download (the newsletter-prompt mockup, A) */
+.news { width: min(480px, calc(100vw - 32px)); box-sizing: border-box; padding: 30px 32px 28px; border-radius: 22px; border: 1px solid rgba(255, 244, 234, 0.14); background: rgba(32, 18, 27, 0.94); color: #FFF4EA; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45); }
+.news::backdrop { background: rgba(20, 10, 16, 0.55); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+.news-ask, .news-done { display: flex; flex-direction: column; gap: 14px; }
+.news [hidden] { display: none; }
+.news-started { display: flex; align-items: center; gap: 10px; font-size: 13px !important; font-weight: 700; }
+.news-tick, .news-mail { flex: none; width: 22px; height: 22px; border-radius: 50%; background: rgba(244, 167, 111, 0.2); display: flex; align-items: center; justify-content: center; }
+.news-mail { width: 44px; height: 44px; }
+.news h2 { margin: 2px 0 0; font-family: 'Unbounded', sans-serif; font-size: 24px; line-height: 1.2; }
+.news p { margin: 0; font-size: 15px; line-height: 1.55; color: rgba(255, 244, 234, 0.82); }
+.news label { margin-top: 6px; font-size: 13px; font-weight: 700; }
+.news input { height: 48px; margin-top: -6px; box-sizing: border-box; padding: 0 16px; border-radius: 12px; border: 1px solid rgba(255, 244, 234, 0.24); background: rgba(255, 244, 234, 0.08); color: #FFF4EA; font: 500 16px 'DM Sans', system-ui, sans-serif; }
+.news input::placeholder { color: rgba(255, 244, 234, 0.5); }
+.news-buttons { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 4px; }
+.news .btn { margin-top: 0; border: 0; font-family: inherit; cursor: pointer; }
+.news .btn:disabled { opacity: 0.6; cursor: progress; }
+.news-no { height: 48px; padding: 0 16px; border: 0; background: none; color: rgba(255, 244, 234, 0.85); font: 700 15px 'DM Sans', system-ui, sans-serif; cursor: pointer; }
+.news .news-small { font-size: 12px; line-height: 1.5; color: rgba(255, 244, 234, 0.6); }
+.news .news-error { font-size: 14px; color: #F4A76F; }
