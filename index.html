@@ -3,18 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LISN StemSplitter · Free stem splitter for Windows: VST3 and desktop app</title>
-<meta name="description" content="Free stem splitter for Windows. Split any song into vocals, drums, bass and more in FL Studio, Ableton Live or the LISN desktop app. Runs on your PC.">
+<title>LISN StemSplitter · Free stem splitter for Windows and Mac: VST3 and desktop app</title>
+<meta name="description" content="Free stem splitter for Windows and Mac. Split any song into vocals, drums, bass and more in FL Studio, Ableton Live or the LISN desktop app. Runs on your computer.">
 <link rel="canonical" href="https://lisn.digital/">
 <meta name="theme-color" content="#2B1822">
 <link rel="icon" href="assets/favicon.ico" sizes="48x48">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
+<script>
+// Windows or Mac downloads (data-os), before the page paints: ?os=mac or ?os=win, else a Mac's browser gets the Mac ones
+document.documentElement.dataset.os = (q => q === 'mac' || q === 'win' ? q : /Macintosh/.test(navigator.userAgent) ? 'mac' : 'win')(new URLSearchParams(location.search).get('os'));
+</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LISN">
 <meta property="og:title" content="LISN StemSplitter">
-<meta property="og:description" content="Split any track into vocals, drums, bass and more, in FL Studio, Ableton Live or the LISN desktop app. Free for Windows.">
+<meta property="og:description" content="Split any track into vocals, drums, bass and more, in FL Studio, Ableton Live or the LISN desktop app. Free for Windows and Mac.">
 <meta property="og:url" content="https://lisn.digital/">
 <meta property="og:image" content="https://lisn.digital/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -36,7 +40,7 @@
    "description": "A free VST3 stem splitter for FL Studio and Ableton Live. Splits a song into vocals, drums, bass and other stems with Demucs, plays them in sync and lets you drag them onto your tracks.",
    "applicationCategory": "MultimediaApplication",
    "applicationSubCategory": "VST3 plugin",
-   "operatingSystem": "Windows 10, Windows 11",
+   "operatingSystem": "Windows 10, Windows 11, macOS 14",
    "downloadUrl": "https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe",
    "offers": {
     "@type": "Offer",
@@ -54,10 +58,10 @@
   {
    "@type": "SoftwareApplication",
    "name": "LISN",
-   "description": "A free desktop app for Windows that splits a song into vocals, drums, bass and other stems with Demucs and plays them in sync, without a DAW.",
+   "description": "A free desktop app for Windows and Mac that splits a song into vocals, drums, bass and other stems with Demucs and plays them in sync, without a DAW.",
    "applicationCategory": "MultimediaApplication",
    "applicationSubCategory": "Stem splitter",
-   "operatingSystem": "Windows 10, Windows 11",
+   "operatingSystem": "Windows 10, Windows 11, macOS 14",
    "downloadUrl": "https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Setup.exe",
    "offers": {
     "@type": "Offer",
@@ -88,7 +92,7 @@
      "name": "Does it upload my music?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. Everything runs on your PC."
+      "text": "No. Everything runs on your computer."
      }
     },
     {
@@ -112,7 +116,7 @@
      "name": "Is there a Mac version?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Not yet."
+      "text": "Yes, for Macs with Apple Silicon (M1 and newer) on macOS 14 or newer. One installer, LISN-Mac.pkg, puts the VST3 and the desktop app on your Mac."
      }
     },
     {
@@ -138,6 +142,14 @@
       "@type": "Answer",
       "text": "The beta isn't code-signed yet. Click More info, then Run anyway."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does my Mac block it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The beta isn't signed with Apple yet. Click Done, then open System Settings > Privacy & Security, scroll down, click Open Anyway and type your Mac password."
+     }
     }
    ]
   }
@@ -160,7 +172,7 @@
       <a class="nav-link" href="#install">Install</a>
       <a class="nav-link" href="#faq">FAQ</a>
       <a class="nav-link" href="#apps">Desktop app</a>
-      <a class="btn" href="#download"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download</a>
+      <a class="btn" href="#download"><svg class="mac-only" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2B1822" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg><svg class="win-only" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download</a>
     </nav>
   </header>
 
@@ -170,11 +182,16 @@
       <h1 class="hero-title">Audio Intelligence <span>Stem by stem</span></h1>
       <p class="hero-sub">Split any track into vocals, drums, bass and more, right inside FL Studio or Ableton Live, or on its own in the LISN desktop app. It all runs on your own PC.</p>
       <div id="download" class="hero-cta">
-        <div class="cta-row">
+        <div class="cta-row mac-only">
+          <a class="btn btn-lg" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Mac.pkg" data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B1822" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download for Mac</a>
+        </div>
+        <p class="fineprint mac-only">Free · One installer: the VST3 for FL Studio and Ableton, and the desktop app · macOS 14 or newer, Apple Silicon (M1 and newer) · Beta</p>
+        <div class="cta-row win-only">
           <a class="btn btn-lg" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-StemSplitter-Setup.exe" data-goatcounter-click="download-vst3" data-goatcounter-title="Download the VST3"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="0" width="5.4" height="5.4" fill="#2B1822"/><rect x="0" y="6.6" width="5.4" height="5.4" fill="#2B1822"/><rect x="6.6" y="6.6" width="5.4" height="5.4" fill="#2B1822"/></svg>Download the VST3</a>
           <a class="btn btn-lg btn-ghost" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Setup.exe" data-goatcounter-click="download-desktop-app" data-goatcounter-title="Get the desktop app"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/><path d="M7 12c1.5-2 3-2 4.5 0s3 2 4.5 0"/></svg>Get the desktop app</a>
         </div>
-        <p class="fineprint">Free · VST3 for FL Studio and Ableton · Desktop app · Windows 10/11 64-bit · Beta</p>
+        <p class="fineprint win-only">Free · VST3 for FL Studio and Ableton · Desktop app · Windows 10/11 64-bit · Beta</p>
+        <div class="os-switch" role="group" aria-label="Downloads for"><button type="button" data-os-btn="win">Windows</button><button type="button" data-os-btn="mac">Mac</button></div>
         <a class="demo-link" href="#demo"><svg width="14" height="14" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1.5v13l11-6.5z" fill="#FFF4EA"/></svg>Watch the 35-second demo</a>
       </div>
 
@@ -292,6 +309,11 @@
       <h2 id="feat-h" class="section-title">Everything stays in your session.</h2>
       <div class="cards cards-features">
         <article class="glass card">
+          <h3>Lead and harmonies</h3>
+          <p>Click the name next to LISN to switch to Harmonies. It splits the lead vocal from the backing harmonies, Quick or Best quality.</p>
+          <div class="chips"><span class="chip stem-chip"><span class="dot vocals"></span>Lead</span> <span class="chip stem-chip"><span class="dot guitar"></span>Harmonies</span></div>
+        </article>
+        <article class="glass card">
           <h3>Tempo and key, apart</h3>
           <p>Drag the Tempo box from 0.5× to 2× and read it in BPM. Shift the key up to 12 semitones either way. One never changes the other.</p>
           <div class="chips"><span class="tbox sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 18a8.5 8.5 0 1 1 15 0"/><path d="m12 13 3.5-3.5"/></svg><span class="tbox-v"><b>96 BPM</b><small>1.30× of 74</small></span><span class="chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></span><span class="tbox sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="tbox-v"><b>-3 st</b><small>Key</small></span><span class="chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 14 5-5 5 5"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF4EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></span></div>
@@ -363,7 +385,7 @@
           <ul class="ticks">
             <li>Right-click a song, Open with, LISN</li>
             <li>Its own wave-styled window, no white title bar</li>
-            <li>Installs just for you, no admin needed</li>
+            <li class="win-only">Installs just for you, no admin needed</li>
           </ul>
           <a class="btn btn-md btn-ghost" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Setup.exe" data-goatcounter-click="download-desktop-app" data-goatcounter-title="Get the desktop app"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/><path d="M7 12c1.5-2 3-2 4.5 0s3 2 4.5 0"/></svg>Get the desktop app</a>
         </article>
@@ -376,8 +398,8 @@
       <div class="midnight-inner">
         <p class="kicker">Install</p>
         <h2 id="inst-h" class="section-title">Up and running in minutes.</h2>
-        <p class="install-for">The VST3 plugin</p>
-        <ol class="install-list">
+        <p class="install-for win-only">The VST3 plugin</p>
+        <ol class="install-list win-only">
           <li>
             <span class="step-num">1</span>
             <div><h3>Close your DAW and run the installer.</h3></div>
@@ -417,8 +439,8 @@
             <div><h3>Add LISN StemSplitter to a track.</h3></div>
           </li>
         </ol>
-        <p class="install-for">The desktop app</p>
-        <ol class="install-list">
+        <p class="install-for win-only">The desktop app</p>
+        <ol class="install-list win-only">
           <li>
             <span class="step-num">1</span>
             <div class="step-body tight">
@@ -441,6 +463,62 @@
             </div>
           </li>
         </ol>
+        <p class="install-for mac-only">On a Mac: the VST3 and the desktop app</p>
+        <ol class="install-list mac-only">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <h3>Open LISN-Mac.pkg from Downloads.</h3>
+              <div class="click-row"><span>macOS says it can't be opened. Click</span> <span class="key">Done</span></div>
+              <div class="macwin" role="img" aria-label="A macOS dialog titled “LISN-Mac.pkg” Not Opened, saying Apple could not verify it is free of malware, with a blue Done button">
+                <div class="macwin-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="macwin-body">
+                  <div class="macwin-icon" aria-hidden="true">&#9888;&#xFE0E;</div>
+                  <div class="macwin-text"><b>“LISN-Mac.pkg” Not Opened</b><span>Apple could not verify “LISN-Mac.pkg” is free of malware that may harm your Mac or compromise your privacy.</span><br><span class="macwin-btn blue">Done</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <h3>Allow it in Privacy &amp; Security.</h3>
+              <div class="crumbs"><span class="crumb">System Settings</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Privacy &amp; Security</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Open Anyway</span></div>
+              <p class="note pretty">Scroll down to find it, then type your Mac password. The beta isn't signed with Apple yet.</p>
+              <div class="macwin" role="img" aria-label="The macOS Privacy and Security settings, with the line “LISN-Mac.pkg” was blocked to protect your Mac, and an Open Anyway button">
+                <div class="macwin-head" aria-hidden="true">Security</div>
+                <div class="macwin-row"><span class="macwin-text">“LISN-Mac.pkg” was blocked to protect your Mac.</span><span class="macwin-btn">Open Anyway</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body tight">
+              <h3>Click through the installer.</h3>
+              <p class="note pretty">It installs the VST3 and the desktop app. The last step downloads the AI engine. It's about 390 MB, needs internet and takes a few minutes.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div class="step-body loose">
+              <h3>Rescan plugins.</h3>
+              <div class="daw">
+                <span class="daw-name">FL Studio</span>
+                <div class="crumbs"><span class="crumb">Options</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Manage plugins</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Find installed plugins</span></div>
+                <p class="note pretty">Still not listed? In Finder, select FL Studio, choose Get Info and turn off “Open using Rosetta”.</p>
+              </div>
+              <div class="daw">
+                <span class="daw-name">Ableton Live</span>
+                <div class="crumbs"><span class="crumb">Settings</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Plug-Ins</span> <span class="sep" aria-hidden="true">&gt;</span> <span class="crumb">Rescan</span></div>
+                <p class="note">with “Use VST3 Plug-In System Folders” turned on.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">5</span>
+            <div><h3>Add LISN StemSplitter to a track, or open LISN from Applications.</h3></div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -448,7 +526,7 @@
       <p class="kicker">Requirements</p>
       <h2 id="req-h" class="section-title">What you need.</h2>
       <dl class="reqs">
-        <div><dt>System</dt><dd>Windows 10 or 11 (64-bit)</dd></div>
+        <div><dt>System</dt><dd class="win-only">Windows 10 or 11 (64-bit)</dd><dd class="mac-only">macOS 14 or newer, on Apple Silicon (M1 and newer)</dd></div>
         <div><dt>Host</dt><dd>A VST3 host (tested in FL Studio), or none with the desktop app</dd></div>
         <div><dt>Disk</dt><dd>3 GB of free space</dd></div>
         <div><dt>Internet</dt><dd>During install</dd></div>
@@ -466,7 +544,7 @@
         </details>
         <details class="glass">
           <summary>Does it upload my music?<span class="faq-plus" aria-hidden="true">+</span></summary>
-          <p>No. Everything runs on your PC.</p>
+          <p>No. Everything runs on your computer.</p>
         </details>
         <details class="glass">
           <summary>Do I need a DAW?<span class="faq-plus" aria-hidden="true">+</span></summary>
@@ -478,17 +556,23 @@
         </details>
         <details class="glass">
           <summary>Is there a Mac version?<span class="faq-plus" aria-hidden="true">+</span></summary>
-          <p>Not yet.</p>
+          <p>Yes, for Macs with Apple Silicon (M1 and newer) on macOS 14 or newer. One installer, LISN-Mac.pkg, puts the VST3 and the desktop app on your Mac. <a href="?os=mac#download">Get it for Mac</a>.</p>
         </details>
         <details class="glass">
           <summary>Where are my stems saved?<span class="faq-plus" aria-hidden="true">+</span></summary>
-          <p>In <code>%APPDATA%\StemSplitter\cache</code>. You can drag them anywhere you like.</p>
+          <p class="win-only">In <code>%APPDATA%\StemSplitter\cache</code>. You can drag them anywhere you like.</p>
+          <p class="mac-only">In <code>~/Library/Application Support/StemSplitter/cache</code>. You can drag them anywhere you like.</p>
         </details>
         <details class="glass">
           <summary>How do I uninstall?<span class="faq-plus" aria-hidden="true">+</span></summary>
-          <p>Go to Windows Settings &gt; Apps, then LISN StemSplitter for the plugin or LISN for the desktop app. Each removes its own AI engine.</p>
+          <p class="win-only">Go to Windows Settings &gt; Apps, then LISN StemSplitter for the plugin or LISN for the desktop app. Each removes its own AI engine.</p>
+          <p class="mac-only">Delete these: <code>/Applications/LISN.app</code>, <code>/Library/Audio/Plug-Ins/VST3/LISN StemSplitter.vst3</code>, the AI engine in <code>/Library/Application Support/LISN</code>, and the Harmonies models in <code>~/Library/Application Support/LISN</code>. Your stems are in <code>~/Library/Application Support/StemSplitter</code>.</p>
         </details>
-        <details class="glass">
+        <details class="glass mac-only">
+          <summary>Why does my Mac block it?<span class="faq-plus" aria-hidden="true">+</span></summary>
+          <p>The beta isn't signed with Apple yet. Click Done, then open System Settings &gt; Privacy &amp; Security, scroll down, click Open Anyway and type your Mac password.</p>
+        </details>
+        <details class="glass win-only">
           <summary>Why does Windows warn me?<span class="faq-plus" aria-hidden="true">+</span></summary>
           <p>The beta isn't code-signed yet. Click More info, then Run anyway.</p>
         </details>
@@ -591,8 +675,34 @@
   header.addEventListener('click', e => { if (e.target === header || e.target.closest('.nav a')) set(false); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
 })();
+// Windows | Mac (the Mac download mockup, B): the switch sets data-os, which shows that system's hero and install steps
+// (styles.css), and every Windows download link becomes the Mac one, so a Mac is never handed an .exe
+(() => {
+  const MAC = 'https://github.com/EdiKrasniqi11/lisn-vst/releases/latest/download/LISN-Mac.pkg';
+  const links = [...document.querySelectorAll('a[href$=".exe"]')].map(a => ({ a, href: a.href, click: a.dataset.goatcounterClick }));
+  const set = os => {
+    document.documentElement.dataset.os = os;
+    for (const { a, href, click } of links) {
+      a.href = os === 'mac' ? MAC : href;
+      a.dataset.goatcounterClick = os === 'mac' ? click.replace(/download-.*/, 'download-mac') : click;
+    }
+    for (const b of document.querySelectorAll('[data-os-btn]')) b.setAttribute('aria-pressed', b.dataset.osBtn === os);
+  };
+  for (const b of document.querySelectorAll('[data-os-btn]')) b.addEventListener('click', () => set(b.dataset.osBtn));
+  set(document.documentElement.dataset.os);
+})();
 </script>
 <dialog class="news" aria-labelledby="news-title">
+  <div class="news-steps" hidden>
+    <p class="news-started"><span class="news-tick" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4A76F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Your download has started</p>
+    <h2>Next, on your Mac</h2>
+    <ol>
+      <li>Open <b>LISN-Mac.pkg</b> from Downloads. macOS says it can't be opened: click <span class="key">Done</span>.</li>
+      <li>Open <b>System Settings › Privacy &amp; Security</b>, scroll down, click <span class="key">Open Anyway</span>, then type your Mac password.</li>
+      <li>Click through the installer. The last step downloads the AI engine (about 390 MB, a few minutes).</li>
+    </ol>
+    <button class="btn btn-md news-close" type="button">Got it</button>
+  </div>
   <form class="news-ask">
     <p class="news-started"><span class="news-tick" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4A76F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg></span>Your download has started</p>
     <h2 id="news-title">Want to hear about new plugins?</h2>
@@ -613,13 +723,23 @@
 <script>
 // The optional newsletter (the newsletter-prompt mockup, A): after a browser's first download click, while the download
 // runs, a dialog asks for an email. It goes to Kit's form, which sends the "confirm your subscription" email.
+// A Mac download shows the three "Open Anyway" steps above it, on every click (the Mac steps mockup, B).
 (() => {
   const d = document.querySelector('.news'), ask = d.querySelector('.news-ask'), done = d.querySelector('.news-done');
+  const steps = d.querySelector('.news-steps');
   const asked = () => { try { return localStorage.getItem('lisn-news'); } catch { return 'no storage'; } };
   if (!d.showModal) return;
   document.addEventListener('click', e => {
-    if (!e.target.closest('a[href*="/releases/latest/download/"]') || asked()) return;
-    try { localStorage.setItem('lisn-news', 'asked'); } catch {}
+    const a = e.target.closest('a[href*="/releases/latest/download/"]');
+    if (!a) return;
+    const mac = a.href.endsWith('.pkg'), news = !asked();
+    if (!mac && !news) return;
+    if (news) try { localStorage.setItem('lisn-news', 'asked'); } catch {}
+    steps.hidden = !mac;
+    steps.querySelector('.news-close').hidden = news;     // the newsletter's own buttons close it
+    ask.querySelector('.news-started').hidden = mac;     // said once, above the steps
+    ask.hidden = !news;
+    done.hidden = true;
     setTimeout(() => d.showModal(), 400);   // the download has started by then
   });
   ask.addEventListener('submit', async e => {
