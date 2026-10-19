@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LISN for Mac (test build)</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2B1822">
+<link rel="icon" href="../assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../styles.css?v=4">
+<style>
+/* Page-specific styles: kept here so the shared styles.css (and its ?v=) stay untouched */
+.mt-hero { padding-bottom: clamp(32px, 5vw, 56px); }
+.mt-wrap { max-width: 900px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) clamp(48px, 7vw, 90px); }
+.mt-wrap h2 { margin: 0 0 14px; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(22px, 3.6vw, 32px); line-height: 1.15; text-shadow: 0 4px 30px rgba(32, 18, 27, 0.45); }
+.mt-wrap .install-list, .mt-card { background: rgba(32, 18, 27, 0.66); margin-top: 0; max-width: none; }
+.mt-card { border-radius: 22px; border: 1px solid rgba(255, 244, 234, 0.14); -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px); padding: clamp(18px, 3vw, 30px) clamp(18px, 3vw, 36px); }
+.mt-wrap section + section { margin-top: clamp(36px, 5vw, 56px); }
+.mt-wrap .step-num { color: #2B1822; }
+.mt-wrap .install-list h3 { font-weight: 500; font-size: 17px; line-height: 1.5; }
+.mt-wrap .install-list h3 b { font-weight: 700; }
+.mt-wrap .install-list h3 .key { font-size: 13px; padding: 3px 10px; }
+.mt-send { margin: 22px 0 0; }
+.mt-send .btn { height: auto; min-height: 48px; padding-block: 10px; line-height: 1.3; }
+
+/* The two macOS windows, drawn in a neutral Mac look */
+.mac { margin-top: 14px; max-width: 460px; color: #1d1d1f; background: #ececec; border-radius: 12px; box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35); font: 13px/1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; overflow: hidden; }
+.mac-dots { display: flex; gap: 7px; padding: 10px 12px 0; }
+.mac-dots i { width: 11px; height: 11px; border-radius: 50%; background: #ff5f57; }
+.mac-dots i:nth-child(2) { background: #febc2e; }
+.mac-dots i:nth-child(3) { background: #28c840; }
+.mac-body { display: flex; gap: 14px; align-items: flex-start; padding: 12px 16px 16px; }
+.mac-icon { flex: none; width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(160deg, #f6f6f6, #cfcfcf); border: 1px solid #bdbdbd; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+.mac-text { flex: 1; min-width: 0; }
+.mac-text b { display: block; font-size: 14px; margin-bottom: 3px; }
+.mac-text span { color: #4a4a4c; }
+.mac-btn { display: inline-block; margin-top: 12px; padding: 4px 16px; border-radius: 6px; background: #fff; border: 1px solid #c8c8c8; color: #1d1d1f; font-weight: 500; }
+.mac-btn.blue { background: #0a84ff; border-color: #0a84ff; color: #fff; }
+.mac-row { display: flex; gap: 14px; align-items: center; justify-content: space-between; padding: 14px 16px; }
+.mac-row .mac-btn { flex: none; margin: 0; }
+.mac-row .mac-text { color: #1d1d1f; }
+.mac-head { padding: 9px 16px; background: #dcdcdc; color: #6e6e73; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+@media (max-width: 520px) { .mac-row { flex-wrap: wrap; } }
+</style>
+</head>
+<body>
+<canvas id="dusk-waves" class="bg-waves" aria-hidden="true"></canvas>
+<div class="bg-shade" aria-hidden="true"></div>
+
+<div class="page">
+
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="LISN Audio Intelligence home"><img class="brand-symbol" src="../assets/lisn-symbol-glass.svg" alt="" width="38" height="38"><span class="brand-mark">LISN</span> <span class="brand-name">Audio Intelligence</span></a>
+  </header>
+
+  <main>
+    <section class="hero mt-hero">
+      <h1 class="hero-title">LISN for Mac <span>(test build)</span></h1>
+      <p class="hero-sub">Thank you for trying LISN on a Mac. This is an early build, so I'd love to hear whether it works for you.</p>
+      <div class="hero-cta">
+        <div class="cta-row">
+          <a class="btn btn-lg" href="https://github.com/EdiKrasniqi11/lisn-vst/releases/download/mac-test-1/LISN-Mac.pkg" data-goatcounter-click="download-mac-test" data-goatcounter-title="Download LISN for Mac (test)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B1822" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download for Mac</a>
+        </div>
+        <p class="fineprint">Free · Test build · macOS 14 (Sonoma) or newer, Apple Silicon (M1 and newer)</p>
+      </div>
+    </section>
+
+    <div class="mt-wrap">
+      <section aria-labelledby="mt-install">
+        <h2 id="mt-install">Install on a Mac</h2>
+        <ol class="install-list">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <h3>Open <b>LISN-Mac.pkg</b> from Downloads. macOS says it can't be opened: click <span class="key">Done</span>.</h3>
+              <div class="mac" role="img" aria-label="A macOS dialog titled “LISN-Mac.pkg” Not Opened, saying Apple could not verify it is free of malware, with a blue Done button">
+                <div class="mac-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="mac-body">
+                  <div class="mac-icon" aria-hidden="true">&#9888;&#xFE0E;</div>
+                  <div class="mac-text"><b>“LISN-Mac.pkg” Not Opened</b><span>Apple could not verify “LISN-Mac.pkg” is free of malware that may harm your Mac or compromise your privacy.</span><br><span class="mac-btn blue">Done</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <h3>Open <b>System Settings › Privacy &amp; Security</b>, scroll down, click <span class="key">Open Anyway</span>, then type your Mac password.</h3>
+              <div class="mac" role="img" aria-label="The macOS Privacy and Security settings, with the line “LISN-Mac.pkg” was blocked to protect your Mac, and an Open Anyway button">
+                <div class="mac-head" aria-hidden="true">Security</div>
+                <div class="mac-row"><span class="mac-text">“LISN-Mac.pkg” was blocked to protect your Mac.</span><span class="mac-btn">Open Anyway</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <h3>Click through the installer. The last step downloads the AI engine (about 390 MB, a few minutes).</h3>
+              <p class="note">Keep the Mac online and let it finish; nothing is stuck, it is just downloading.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="mt-check">
+        <h2 id="mt-check">What to check</h2>
+        <div class="mt-card">
+          <ul class="ticks">
+            <li>The installer finishes.</li>
+            <li>LISN opens from Applications.</li>
+            <li>FL Studio finds LISN StemSplitter (Options › Manage plugins › Find plugins) and it loads.</li>
+            <li>A split works.</li>
+            <li>Harmonies works: click the name next to LISN, drop a song, try Quick.</li>
+            <li>The LISN window: the red, yellow and green buttons sit level with the LISN logo; dragging the top bar moves the window; the Dusk/Midnight buttons respond.</li>
+            <li>If something fails, please include your macOS version and Mac model, a screenshot, and (if the installer failed) the file /Library/Application Support/LISN/engine/setup.log.</li>
+            <li>If FL Studio doesn’t list the plugin, tell us whether FL is set to “Open using Rosetta” (Finder › Get Info).</li>
+          </ul>
+          <p class="mt-send"><a class="btn btn-md btn-ghost" href="mailto:info@lisn.digital?subject=LISN%20for%20Mac%20test">Send what you see to info@lisn.digital</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script>
+// The hero's Dusk waves (same drawing as the home page); a still frame when the visitor prefers reduced motion.
+(() => {
+  const DUSK = { bg: '#6F7679', layers: [
+    { c: '#D9775F', base: 0.30, amp: 0.10, dir: 1, slope: -0.18 },
+    { c: '#F4A76F', base: 0.46, amp: 0.11, dir: 1, slope: 0.22 },
+    { c: '#7B5467', base: 0.20, amp: 0.12, dir: -1, slope: 0.16 },
+    { c: '#D95F6B', base: 0.72, amp: 0.09, dir: 1, slope: -0.2 },
+    { c: '#F08A7C', base: 0.90, amp: 0.07, dir: 1, slope: 0.14 }
+  ]};
+  const c = document.getElementById('dusk-waves');
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  let raf = 0;
+  function size() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5), r = c.getBoundingClientRect();
+    c.width = Math.max(1, Math.round(r.width * dpr));
+    c.height = Math.max(1, Math.round(r.height * dpr));
+  }
+  function draw(ts) {
+    const t = ts * 0.00006, ctx = c.getContext('2d'), w = c.width, h = c.height;
+    ctx.fillStyle = DUSK.bg; ctx.fillRect(0, 0, w, h);
+    const step = Math.max(8, w / 90);
+    DUSK.layers.forEach((L, i) => {
+      const p = i * 1.9, f1 = 0.7 + i * 0.22, f2 = 1.6 + i * 0.27;
+      ctx.beginPath(); ctx.moveTo(0, L.dir > 0 ? h : 0);
+      for (let x = 0; x <= w + step; x += step) {
+        const u = x / w;
+        const y = h * (L.base + (u - 0.5) * L.slope) + h * L.amp * (
+          Math.sin(u * Math.PI * 2 * f1 + t * (5 + i) + p) * 0.62 +
+          Math.sin(u * Math.PI * 2 * f2 - t * (3.2 + i * 0.7) + p * 1.7) * 0.38);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, L.dir > 0 ? h : 0); ctx.closePath();
+      ctx.fillStyle = L.c; ctx.fill();
+    });
+  }
+  function start() {
+    cancelAnimationFrame(raf);
+    if (still.matches) { draw(0); return; }
+    const loop = ts => { draw(ts); raf = requestAnimationFrame(loop); };
+    raf = requestAnimationFrame(loop);
+  }
+  new ResizeObserver(() => { size(); draw(still.matches ? 0 : performance.now()); }).observe(c);
+  still.addEventListener('change', start);
+  size(); start();
+})();
+</script>
+<!-- Visit and download-click counts, no cookies: https://lisn.goatcounter.com -->
+<script data-goatcounter="https://lisn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
